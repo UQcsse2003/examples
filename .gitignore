@@ -1,6 +1,21 @@
-*.class
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
 
-# Package Files #
+# Eclipse
+*.settings
+.settings/ 
+*.classpath
+*.project
+
+# Java
+*.class
 *.jar
 *.war
 *.ear
+
+# Maven
+target/

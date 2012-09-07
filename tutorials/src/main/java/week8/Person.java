@@ -102,8 +102,8 @@ public class Person {
 	
 
 	/**
-	 * Asks another villager you've met what their number is
-	 * @return
+	 * Another villager (whosAsking) asks what this villager's number is
+	 * @return this villager's number (or so we claim...)
 	 */
 	public int getNumber(Person whosAsking) {
 		return number;

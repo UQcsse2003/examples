@@ -45,6 +45,14 @@ public class Person {
 	}	
 	
 	/**
+	 * Receive important news about your family...
+	 * @param message
+	 */
+	public void receiveMessage(String message) {
+		System.out.println("Message received!");
+	}
+	
+	/**
 	 * Finds another villager
 	 * @param number
 	 * @return

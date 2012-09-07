@@ -1,5 +1,8 @@
 package week8;
 
+/**
+ * John Drake, number 6. 
+ */
 public class NumberSix extends Person {
 	
 	@Override

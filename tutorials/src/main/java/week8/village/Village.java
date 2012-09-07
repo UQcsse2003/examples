@@ -3,7 +3,7 @@ package week8.village;
 import java.util.HashSet;
 import java.util.Set;
 
-import week8.people.Person;
+import week8.Person;
 
 
 public enum Village {

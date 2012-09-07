@@ -1,4 +1,4 @@
-package week8.people;
+package week8;
 
 public class LiarException extends RuntimeException {
 

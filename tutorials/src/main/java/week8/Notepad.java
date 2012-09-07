@@ -1,4 +1,4 @@
-package week8.people;
+package week8;
 
 import java.util.HashMap;
 import java.util.Map;

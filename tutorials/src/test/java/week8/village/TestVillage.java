@@ -7,12 +7,12 @@ import org.junit.*;
 import org.mockito.Mockito;
 
 
-import week8.people.LiarException;
-import week8.people.Notepad;
-import week8.people.NumberOne;
-import week8.people.NumberSix;
-import week8.people.Person;
-import week8.people.Warden;
+import week8.LiarException;
+import week8.Notepad;
+import week8.NumberOne;
+import week8.NumberSix;
+import week8.Person;
+import week8.Warden;
 import week8.village.Village;
 
 public class TestVillage {

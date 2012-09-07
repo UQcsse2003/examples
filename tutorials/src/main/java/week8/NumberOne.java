@@ -6,17 +6,26 @@ import java.util.Set;
 
 import week8.village.Village;
 
+/**
+ * Number One is the secretive villain behind it all...
+ */
 public class NumberOne extends Person {
-	
-	private static int ASKS_BEFORE_CHANGE = 50;
-	
+		
+	/**
+	 * Number One hides by pretending to be an ordinary villager.
+	 */
 	private int pretendingToBe;
 	
+	/**
+	 * All the numbers Number One has pretended to be
+	 */
 	private ArrayList<Integer> pastIdentities = new ArrayList<Integer>();
 	
+	/**
+	 * Used for choosing a new identity
+	 */
 	private Random random = new Random();
 		
-	
 	@Override
 	protected void allocateNumber() {
 		this.number = 1;
@@ -28,8 +37,10 @@ public class NumberOne extends Person {
 		super.enterVillage();
 	}
 	
-	private void changeIdentity() {
-		
+	/**
+	 * Change which number Number One pretends to be
+	 */
+	private void changeIdentity() {		
 		int newIdentity = pretendingToBe;
 		while(newIdentity == pretendingToBe) {
 			// Pretend to be a random villager
@@ -71,6 +82,9 @@ public class NumberOne extends Person {
 		}
 	}
 	
+	/**
+	 * When Number One needs to get someone out of the Village pronto, he knows how to smuggle them out.
+	 */
 	private void getHimOutOfHere(Person p) {
 		// At least I know how to get rid of them.
 		Set<Person> occupants = Village.INSTANCE.getOccupants();

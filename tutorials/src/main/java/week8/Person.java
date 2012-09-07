@@ -115,7 +115,10 @@ public class Person {
 	 * him in a lie -- having pretended to be two different numbers. 
 	 */
 	public void youAreNumberOne(int firstNumber, int secondNumber, Person whosAsking) {
-		// Failed accusation.
+		/*
+		 * As this is an ordinary person, it must be a failed accusation.
+		 * (See the NumberOne class for what happens when you accuse the real Number One).
+		 */
 		String msg = "";
 		if (firstNumber != number) {
 			msg = String.format("I never said I was %d! ", firstNumber);

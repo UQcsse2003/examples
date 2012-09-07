@@ -36,6 +36,10 @@ public class TestVillage {
 	 */
 	@Test(expected = UnsupportedOperationException.class)
 	public void testLeaveVillage() {
+		// Set this up with Drake in the Village.
+		johnDrake.enterVillage();		
+		
+		// Now try to leave
 		johnDrake.leaveVillage();
 	}
 	
@@ -87,6 +91,7 @@ public class TestVillage {
 	@Test
 	public void testEscapeAttemptInTheory() {
 				
+		// Set this up with Drake, Number One, and 300 Villagers in the Village.
 		for (int i = 0; i < 300; i++) {
 			Person p = new Person();
 			p.enterVillage();
@@ -94,6 +99,7 @@ public class TestVillage {
 		johnDrake.enterVillage();		
 		numberOne.enterVillage();
 		
+		// Drake asks all the Villagers to find Number Six
 		for (Person p : Village.INSTANCE.getOccupants()) {
 			// "Could you look for Number Six please, I've got an important message about his family..."
 			p.find(6);
@@ -111,8 +117,7 @@ public class TestVillage {
 					lastLie = ex;
 				}
 			}			
-		}	
-		
+		}			
 		numberOne.youAreNumberOne(lastLie.getFirst(), lastLie.getSecond(), johnDrake);
 		
 		// Check that in theory, John Drake would discover Number One and be kicked out of the Village
@@ -130,13 +135,15 @@ public class TestVillage {
 	@Test
 	public void testEscapeAttemptInPractice() {
 		
-		// Really, the village has some wardens too.
-		
+		/*
+		 *  Really, the village has some wardens too.
+		 *  Set this test up with Drake, Number One, 150 Villagers, and 150 Wardens in the village.
+		 *  (These are high value prisoners, they need a lot of wardens!)
+		 */		
 		for (int i = 0; i < 150; i++) {
 			Warden w = new Warden();
 			w.enterVillage();
 		}		
-
 		for (int i = 0; i < 150; i++) {
 			Person p = new Person();
 			p.enterVillage();
@@ -144,7 +151,7 @@ public class TestVillage {
 		johnDrake.enterVillage();	
 		numberOne.enterVillage();
 		
-		
+		// Drake asks everyone in the village to look for him. He doesn't know who the wardens are.
 		for (Person p : Village.INSTANCE.getOccupants()) {
 			// "Could you look for Number Six please, I've got an important message about his family..."
 			p.find(6);

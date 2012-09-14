@@ -73,7 +73,6 @@ public class TestVillage {
 		// Use the escape route
 		johnDrake.escape();
 
-		// Check he didn't get out
 		assertTrue(
 			"John Drake doesn't think he escaped",
 			johnDrake.hasEscaped()

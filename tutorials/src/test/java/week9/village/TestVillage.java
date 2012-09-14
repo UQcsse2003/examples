@@ -117,6 +117,16 @@ public class TestVillage {
 		/* 
 		 * ... and he opens the door of the "office" and walks back out 
 		 * into the Village ... 
+		 * 
+		 * Have a look at the contents of:
+		 * johnDrake.escape
+		 * johnDrake.beShippedByBoat
+		 * johnDrake.hearChimes
+		 * to find out how he knew he hadn't escaped after all
+		 * 
+		 * And then look at 
+		 * Village.getOccupants()
+		 * to see why his escape only appeared to succeed.
 		 */
 	}
 	

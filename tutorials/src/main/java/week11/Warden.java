@@ -9,18 +9,18 @@ public class Warden extends Person {
 	/**
 	 * Oppress a villager 
 	 */
-	public void torture(Person victim, List<? extends Person> bystanders) {
+	public void mistreat(Person victim, List<? extends Person> bystanders) {
 		List<Person> allPresent = new ArrayList<Person>();
 		allPresent.addAll(bystanders);
 		allPresent.add(this);
 		
-		victim.torture(allPresent);
+		victim.mistreated(allPresent);
 		for (Person p : bystanders) {
-			p.observedTorture(victim);
+			p.observedMistreatment(victim);
 		}		
 	}
 	
-	public void torture(Warden victim, List<? extends Person> bystanders) {
+	public void mistreat(Warden victim, List<? extends Person> bystanders) {
 		// Do nothing		
 	}
 	

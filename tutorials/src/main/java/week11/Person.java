@@ -51,9 +51,9 @@ public class Person {
 	}
 
 	/**
-	 * A warden isn't being very nice to you.
+	 * A warden is mistreating you, beating you up, etc.
 	 */
-	public void torture(List<? extends Person> present) {
+	public void mistreated(List<? extends Person> present) {
 		logger.warn("Help, help, I'm being oppressed!");
 		
 		// If they didn't do anything to stop it, they must be a Warden!
@@ -66,7 +66,7 @@ public class Person {
 	 * Witness a villager being oppressed
 	 * @param p
 	 */
-	public void observedTorture(Person p) {
+	public void observedMistreatment(Person p) {
 		trusted.add(p);
 	}
 	

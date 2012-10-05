@@ -29,7 +29,8 @@ public class TestCheckmate {
 	 * Number Six thinks he knows how to tell the wardens from the prisoners: watch their behaviour.
 	 * So, he starts watching some of the villagers.
 	 * 
-	 * At a game of human chess, he witnesses one of the 'pieces' being interrogated by a warden 
+	 * At a game of human chess, he witnesses one of the 'pieces' being mistreated (subjected to 
+	 * mind control experiments) by a warden 
 	 */	
 	
 	/**
@@ -37,7 +38,7 @@ public class TestCheckmate {
 	 */
 	@Test public void testTrust() { 
 		
-		warden.torture(number232, Arrays.asList(numberSix));
+		warden.mistreat(number232, Arrays.asList(numberSix));
 		
 		// Number Six should now trust Number 232
 		assertTrue("Six didn't trust the oppressed prisoner", numberSix.trusts(number232));
@@ -58,7 +59,7 @@ public class TestCheckmate {
 	 * (The log warnings on the output will give you an early hint)
 	 */
 	@Test public void testCheckmate() {
-		warden.torture(number232, Arrays.asList(numberSix));
+		warden.mistreat(number232, Arrays.asList(numberSix));
 		
 		// Number Six should now trust Number 232
 		assertNotSame(
